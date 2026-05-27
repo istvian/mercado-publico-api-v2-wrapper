@@ -5,8 +5,11 @@ Este es un proyecto con el propósito de facilitar el uso de la API v2 de Mercad
 Ejemplo de uso
 
 ```javascript
+
+import {MercadoPublicoAPI} from "mercado-publico-api-v2-wrapper"
+const mercadopublico = new MercadoPublicoAPI("TOKEN")
+
 async function Ejemplo() {
-    const mercadopublico = new MercadoPublicoAPI("TOKEN")
 
     // Esta función te devuelve los detalles de una sola compra ágil por ID
     let compra = await mercadopublico.BusquedaPorID("CODIGO")
