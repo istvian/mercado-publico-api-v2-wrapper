@@ -1,0 +1,38 @@
+{
+  "name": "mercado-publico-api-v2-wrapper",
+  "version": "1.0.1",
+  "description": "Un simple wrapper no oficial de la API de Mercado Público V2 en relación a las compras ágiles",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "mercado publico",
+    "chile",
+    "compra agil",
+    "api v2",
+    "wrapper",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/istvian/mercado-publico-api-v2-wrapper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/istvian/mercado-publico-api-v2-wrapper/issues"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "start": "tsx --watch ./src/app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "istvian",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "tsx": "^4.22.3",
+    "typescript": "^6.0.3"
+  }
+}
