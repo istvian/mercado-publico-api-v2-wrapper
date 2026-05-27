@@ -97,7 +97,7 @@ export class MercadoPublicoAPI {
     }
 }
 //#region Interfaces
-interface Busqueda {
+export interface Busqueda {
     ttl_cambio_ms?: number;
     cambio_desde?: Date;
     cambio_hasta?: Date;
@@ -111,46 +111,46 @@ interface Busqueda {
     numero_pagina?: number;
     ordenar_por?: OrdenarPor;
 }
-interface EstadoRespuesta {
+export interface EstadoRespuesta {
     id_estado: number;
     codigo: string;
     glosa: string;
 }
-interface Convocatoria {
+export interface Convocatoria {
     estado_convocatoria: number;
     descripcion: string;
 }
-interface Fechas {
+export interface Fechas {
     fecha_publicacion: string;
     fecha_cierre: string;
     fecha_ultimo_cambio: string;
     fecha_cierre_primer_llamado: string;
     fecha_cierre_segundo_llamado: string;
 }
-interface Montos {
+export interface Montos {
     moneda: string;
     monto_disponible: number;
     monto_disponible_clp: number;
 }
-interface Institucion {
+export interface Institucion {
     organismo_comprador: string;
     rut: string;
     unidad_compra: string;
     region: number;
     nombre_region: string;
 }
-interface Resumen {
+export interface Resumen {
     total_ofertas_recibidas: number;
 }
-interface Motivos {
+export interface Motivos {
     motivo_cancelacion: string | null;
     motivo_desierta: string | null;
     motivo_seleccion: string | null;
 }
-interface Links {
+export interface Links {
     detalle: string;
 }
-interface Item {
+export interface Item {
     codigo: string;
     nombre: string;
     estado: EstadoRespuesta;
@@ -163,39 +163,39 @@ interface Item {
     motivos: Motivos;
     links: Links | Links[];
 }
-interface Paginacion {
+export interface Paginacion {
     total_paginas: number;
     numero_pagina: number;
     tamano_pagina: number;
     total_resultados: number;
 }
-interface Payload {
+export interface Payload {
     items: Item[];
     paginacion: Paginacion;
 }
-interface ApiResponse {
+export interface ApiResponse {
     success: string;
     trace: string | null;
     payload: Payload;
     errors: any[] | null;
 }
-interface Convocatoria {
+export interface Convocatoria {
     estado_convocatoria: number;
     descripcion: string;
     fecha_cierre_primer_llamado: string;
     fecha_cierre_segundo_llamado: string;
 }
-interface Fechas {
+export interface Fechas {
     fecha_publicacion: string;
     fecha_cierre: string;
     fecha_ultimo_cambio: string;
     fecha_cancelacion: string | null;
 }
-interface Entrega {
+export interface Entrega {
     direccion_entrega: string;
     plazo_entrega_dias: number;
 }
-interface Presupuesto {
+export interface Presupuesto {
     tipo_presupuesto: string;
     moneda: string;
     presupuesto_estimado: number;
@@ -204,34 +204,34 @@ interface Presupuesto {
     valor_cambio_moneda: number | null;
     fecha_cambio_moneda: string | null;
 }
-interface Institucion {
+export interface Institucion {
     organismo_comprador: string;
     rut: string;
     unidad_compra: string;
     region: number;
     nombre_region: string;
 }
-interface ProductoSolicitado {
+export interface ProductoSolicitado {
     codigo_producto: number;
     nombre: string;
     descripcion: string;
     cantidad: number;
     unidad_medida: string;
 }
-interface Resumen {
+export interface Resumen {
     multa_sancion: number;
     total_ofertas_recibidas: number;
     total_demandas: number;
 }
-interface Motivos {
+export interface Motivos {
     motivo_cancelacion: string | null;
     motivo_desierta: string | null;
 }
-interface Flags {
+export interface Flags {
     considera_requisitos_medioambientales: boolean;
     considera_requisitos_impacto_social_economico: boolean;
 }
-interface DetallePayload {
+export interface DetallePayload {
     codigo: string;
     nombre: string;
     descripcion: string;
@@ -249,7 +249,7 @@ interface DetallePayload {
     motivos: Motivos;
     flags: Flags;
 }
-interface ApiDetalleResponse {
+export interface ApiDetalleResponse {
     success: string;
     trace: string | null;
     payload: DetallePayload;
@@ -258,11 +258,11 @@ interface ApiDetalleResponse {
 //#endregion
 
 //#region Enums
-enum OrdenarPor {
+export enum OrdenarPor {
     "FechaUltimaModificacion" = "FechaUltimaModificacion",
     "FechaPublicacion" = "FechaPublicacion",
 }
-enum Estado {
+export enum Estado {
     "Publicada" = "publicada",
     "Cerrada" = "cerrada",
     "Desierta" = "desierta",
@@ -270,7 +270,7 @@ enum Estado {
     "Proveedor Seleccionado" = "proveedor_seleccionado",
     "OC Emitida" = "oc_emitida",
 }
-enum Region {
+export enum Region {
     "Tarapacá" = 1,
     "Antofagasta" = 2,
     "Atacama" = 3,
