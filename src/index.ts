@@ -1,4 +1,4 @@
-class MercadoPublicoAPI {
+export class MercadoPublicoAPI {
 
     baseUrl: string = "https://api2.mercadopublico.cl/v2/compra-agil";
 
