@@ -1,8 +1,20 @@
 # mercado-publico-api-v2-wrapper
 
-Este es un proyecto con el propósito de facilitar el uso de la API v2 de Mercado Público en NodeJS. Esta API sirve solo para compras ágiles.
+Un envoltorio (wrapper) de Node.js diseñado para simplificar la integración y el consumo de la API v2 de Mercado Público (Chile), enfocada exclusivamente en el módulo de Compras Ágiles.
 
-Ejemplo de uso
+## Características
+- Enfoque en Compra Ágil: Optimizado para los endpoints de la API v2 de Mercado Público.
+- Filtros Flexibles: Soporte para búsquedas por palabras clave, rangos de fechas, regiones y estados.
+- Soporte Multivalor: Permite filtrar por múltiples regiones o estados en una sola consulta.
+- Sintaxis Moderna: Basado en promesas (async/await) y preparado para ES Modules.
+
+## Instalación
+
+```terminal
+npm i mercado-publico-api-v2-wrapper
+```
+
+## Ejemplo de uso
 
 ```javascript
 
@@ -14,8 +26,6 @@ async function Ejemplo() {
     // Esta función te devuelve los detalles de una sola compra ágil por ID
     let compra = await mercadopublico.BusquedaPorID("CODIGO")
    
-    // Esta función te devuelve un listado de compras ágiles según los filtros que utilizaste
-
     // Buscar y filtrar por query
     let resultadoQuery = await mercadopublico.Busqueda({ query: "toner impresora" })
 
@@ -38,4 +48,5 @@ async function Ejemplo() {
 
 ```
 
-Este proyecto no es comercial y puede tener errores, sientete libre de aportar.
+## Contribuciones
+Este es un proyecto de código abierto y no comercial. Si encuentras algún error, deseas proponer mejoras o añadir soporte para nuevos parámetros de la API, siéntete libre de abrir un Issue o enviar un Pull Request directamente al repositorio.
